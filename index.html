@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Negi - The Best Cricket Tipper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/10/25/80/01/360_F_1025800176_0rioK7kS1BAXOqqWbzzu3HKxQBQfYGs3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.5s ease;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 800px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .timer-container {
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .timer {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .timer-label {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff0000, #ff6600);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 102, 0, 0.6);
+        }
+
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .social-proof {
+            margin-top: 2rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .timer {
+                font-size: 2.5rem;
+            }
+            
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .timer {
+                font-size: 2rem;
+            }
+            
+            .timer-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.JPG" alt="Pawan Negi Logo" class="logo" id="logo">
+        </div>
+        
+        <h1>Pawan Negi</h1>
+
+        <div class="social-proof">🏏 19,778 subscribers</div><br />
+
+        <div class="subtitle">The Best Cricket Tipper Awarded</div>
+        
+        <p>Poora Telegram Apna Tips Copy Karte....Apke Bhai Ka Source Direct India Ke Bahar Se Hai</p>
+        <p>Bookie Ka System Hila dega Aapka Bhai...</p>
+        
+        <a href="https://t.me/+omOqJGHsJ-A1NTRl" class="cta-button" id="ctaButton">Join [Pawan Negi] Channel</a>
+        
+        <div class="timer-container">
+            <div class="timer" id="timer">60</div>
+            <div class="timer-label">Seconds Remaining</div>
+        </div>
+
+    </div>
+
+    <script>
+        // Timer functionality
+        let timeLeft = 60;
+        const timerElement = document.getElementById('timer');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                timerElement.textContent = "OFFER EXPIRED!";
+                timerElement.style.color = "#ff0000";
+            } else if (timeLeft <= 10) {
+                timerElement.style.color = "#ff6600";
+                timerElement.style.animation = "pulse 1s infinite";
+            }
+        }, 1000);
+
+        // Random color generator for background
+        const colors = [
+            'linear-gradient(135deg, #1e3c72, #2a5298)',
+            'linear-gradient(135deg, #614385, #516395)',
+            'linear-gradient(135deg, #e53935, #e35d5b)',
+            'linear-gradient(135deg, #159957, #155799)',
+            'linear-gradient(135deg, #000046, #1cb5e0)',
+            'linear-gradient(135deg, #eb3349, #f45c43)',
+            'linear-gradient(135deg, #dd5e89, #f7bb97)',
+            'linear-gradient(135deg, #56ccf2, #2f80ed)'
+        ];
+
+        // Set random background color
+        document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+        // Button animation
+        const ctaButton = document.getElementById('ctaButton');
+        
+        ctaButton.addEventListener('mouseenter', () => {
+            ctaButton.style.animation = 'none';
+            setTimeout(() => {
+                ctaButton.style.animation = 'pulse 1s infinite';
+            }, 10);
+        });
+
+        ctaButton.addEventListener('mouseleave', () => {
+            ctaButton.style.animation = 'none';
+        });
+
+        // Random logo color border
+        const logo = document.getElementById('logo');
+        const borderColors = ['#ff6600', '#1cb5e0', '#eb3349', '#56ccf2', '#159957', '#dd5e89'];
+        logo.style.borderColor = borderColors[Math.floor(Math.random() * borderColors.length)];
+    </script>
+</body>
+</html>
